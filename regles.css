@@ -1,0 +1,55 @@
+/* Titre principal des règles */
+.regle-titre {
+    font-family: 'gear', sans-serif;
+    font-size: 40px;
+    color: #ff0000;
+    text-align: center;
+    margin: 30px 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Section de règle (texte + image) */
+.regle-section {
+    display: flex;
+    align-items: center;
+    background-color: rgba(30, 30, 30, 0.8);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    padding: 20px;
+    margin: 30px 5%;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    transition: all 0.4s ease;
+}
+.regle-section:hover{
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5); 
+    transform: translateY(-5px); 
+    background-color: rgba(40, 40, 40, 0.95); 
+}
+/* Texte des règles */
+.regle-texte {
+    flex: 1;
+    padding: 0 20px;
+}
+
+.regle-texte h2 {
+    color: #ff0000;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #ff0000;
+    padding-bottom: 5px;
+}
+
+.regle-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+}
+/* Responsive : passage en colonne sur mobile */
+@media (max-width: 768px) {
+    .regle-section {
+        flex-direction: column !important;
+    }
+    .regle-image {
+        margin: 20px 0;
+    }
+}
