@@ -1,0 +1,302 @@
+@font-face {
+    font-family: 'gear';
+    src: url('gear6/Gear6.woff') format('woff');
+}
+body {
+    background-image: url('gant.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: white;
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+    line-height: 1.6;
+}
+
+nav {
+    background-color: rgba(0, 0, 0, 0.8);
+    font-size: 24px;
+    padding: 15px 0;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 50px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+nav > div {
+    padding: 10px 30px;
+    margin: 0 20px;
+    transition: all 0.3s;
+}
+nav > div:hover {
+    background-color: rgba(68, 0, 255, 0.3);
+    border-radius: 5px;
+}
+
+.submenu {
+    display: none;
+    background-color: rgba(0, 0, 0, 0.9);
+    padding: 5px 0;
+    margin-top: 5px;
+    border-radius: 0 0 5px 5px;
+    min-width: 200px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+.parents:hover .submenu {
+    display: block;
+}
+.trait {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 16px;
+    margin-right: 10px;
+    vertical-align: middle;
+    display: inline-block;
+}
+.submenu div {
+    padding: 0 15px 0 0;
+}
+.submenu div a {
+    padding: 8px 15px;
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.2s;
+    vertical-align: middle;
+}
+.submenu div a:hover {
+    background-color: rgba(68, 0, 255, 0.3);
+    padding-left: 20px;
+}
+
+#bienvenue {
+    font-family: 'gear', sans-serif;
+    font-size: 80px;
+    color: #ff0000;
+    text-align: center;
+    margin: 30px 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    padding: 10px;
+}
+
+.presentation {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+    margin: 50px 5%;
+    background-color: rgba(30, 30, 30, 0.9);
+    padding: 40px 30px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    transition: all 0.4s ease;
+}
+.presentation:hover {
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+    transform: translateY(-5px);
+    background-color: rgba(40, 40, 40, 0.95);
+}
+.presentation img {
+    max-width: 250px;
+    max-height: 200px;
+    border-radius: 5px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+    object-fit: cover;
+    transition: all 0.3s ease;
+}
+.presentation img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+}
+.presentation div {
+    flex: 1;
+    padding: 0 20px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+.presentation h2 {
+    font-size: 36px;
+    color: #ff0066;
+    margin-bottom: 20px;
+    line-height: 1.3;
+    transition: all 0.3s ease;
+}
+.presentation:hover h2 {
+    color: #ff3388;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8);
+}
+.presentation p {
+    font-size: 18px;
+    color: white;
+    line-height: 1.7;
+    margin: 0;
+    transition: all 0.3s ease;
+}
+.presentation:hover p {
+    color: #f0f0f0;
+    font-size: 18.5px;
+}
+
+@media (max-width: 768px) {
+    .presentation {
+        flex-direction: column;
+    }
+    .presentation img {
+        margin-bottom: 20px;
+    }
+}
+
+.video-container {
+    width: 100%;
+    max-width: 500px;
+    margin: 20px auto 0;
+    text-align: center;
+}
+.video-container video {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    background: #000;
+}
+@media (max-width: 768px) {
+    .video-container {
+        max-width: 100%;
+    }
+}
+
+article {
+    margin: 0 5%;
+    padding: 20px;
+}
+div.histoire, div.orga1, div.orga2 {
+    background-color: rgba(30, 30, 30, 0.8);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px;
+    margin: 50px 0;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+div.histoire:hover, div.orga1:hover, div.orga2:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+div.histoire div, div.orga1 div, div.orga2 div {
+    flex: 1;
+    padding: 0 20px;
+}
+div img {
+    max-width: 400px;
+    max-height: 300px;
+    height: auto;
+    width: auto;
+    border-radius: 5px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s;
+    object-fit: contain;
+    margin: 0 20px;
+}
+div img:hover {
+    transform: scale(1.02);
+}
+div p {
+    margin: 10px 0;
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+h2 {
+    font-size: 32px;
+    color: #cc0000;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #cc0000;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+p a {
+    color: #4400ff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+.lien-one {
+    color: #f700ff;
+    border-bottom: 2px solid #f700ff;
+    padding-bottom: 2px;
+}
+.lien-wbc {
+    color: #00cc66;
+    border-bottom: 2px solid #00cc66;
+    padding-bottom: 2px;
+}
+p a:hover {
+    text-decoration: underline;
+    opacity: 0.9;
+}
+.lien-one:hover {
+    color: #f380da;
+    border-bottom-color: #f380da;
+}
+.lien-wbc:hover {
+    color: #66ffcc;
+    border-bottom-color: #66ffcc;
+}
+
+footer {
+    font-size: 20px;
+    background-color: rgba(50, 50, 50, 0.8);
+    text-align: center;
+    padding: 20px;
+    width: 100%;
+    margin-top: 50px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+footer a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    background-color: rgba(68, 0, 255, 0.5);
+    border-radius: 5px;
+    transition: all 0.3s;
+}
+footer a:hover {
+    background-color: rgba(68, 0, 255, 0.8);
+    transform: scale(1.05);
+}
+
+a {
+    color: #4400ff;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+a:hover {
+    color: #ff0066;
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    div.histoire, div.orga1, div.orga2 {
+        flex-direction: column;
+        padding: 20px;
+    }
+    div img {
+        margin: 20px 0;
+    }
+    #bienvenue {
+        font-size: 50px;
+    }
+}

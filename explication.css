@@ -1,0 +1,640 @@
+/* Police et fond */
+@font-face { /* Déclaration d'une nouvelle police personnalisée */
+    font-family: 'gear'; /* Nom de la police à utiliser dans le CSS */
+    src: url('gear6/Gear6.woff') format('woff'); /* Source du fichier de police */
+}
+body { /* Style global du corps de la page */
+    background-image: url('gant.jpg'); /* Image d’arrière-plan */
+    background-repeat: no-repeat; /* Empêche la répétition de l’image */
+    background-size: cover; /* L’image couvre toute la page */
+    background-attachment: fixed; /* L’image reste fixe lors du défilement */
+    background-position: center; /* Centre l’image */
+    font-family: 'Arial', sans-serif; /* Police principale du texte */
+    margin: 0; /* Supprime les marges par défaut */
+    padding: 0; /* Supprime les espacements internes par défaut */
+    color: white; /* Texte en blanc */
+    width: 100%; /* Largeur totale de la page */
+    max-width: 100%; /* Empêche le dépassement horizontal */
+    overflow-x: hidden; /* Cache le débordement horizontal */
+    line-height: 1.6; /* Espacement vertical du texte */
+}
+
+/* En-tête et menu */
+nav { /* Style de la barre de navigation */
+    background-color: rgba(0, 0, 0, 0.8); /* Fond noir semi-transparent */
+    font-size: 24px; /* Taille du texte */
+    padding: 15px 0; /* Espace intérieur en haut et en bas */
+    display: flex; /* Affiche les éléments du menu en ligne */
+    justify-content: center; /* Centre les éléments horizontalement */
+    width: 100%; /* Largeur totale */
+    margin-bottom: 50px; /* Espace sous le menu */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3); /* Ombre sous le menu */
+    position: sticky; /* Le menu reste en haut au défilement */
+    top: 0; /* Positionné en haut de la page */
+    z-index: 100; /* Priorité d’affichage élevée */
+}
+nav > div { /* Chaque élément du menu */
+    padding: 10px 30px; /* Espacement interne */
+    margin: 0 20px; /* Espacement entre les éléments */
+    transition: all 0.3s; /* Animation fluide au survol */
+}
+nav > div:hover { /* Effet au survol du menu */
+    background-color: rgba(68, 0, 255, 0.3); /* Fond violet transparent */
+    border-radius: 5px; /* Coins arrondis */
+}
+
+/* Sous-menu */
+.submenu { /* Conteneur du sous-menu */
+    display: none; /* Caché par défaut */
+    background-color: rgba(0, 0, 0, 0.9); /* Fond noir opaque */
+    padding: 5px 0; /* Espacement vertical interne */
+    margin-top: 5px; /* Espace au-dessus */
+    border-radius: 0 0 5px 5px; /* Coins arrondis en bas */
+    min-width: 200px; /* Largeur minimale */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Ombre */
+}
+.parents:hover .submenu { /* Affiche le sous-menu au survol du parent */
+    display: block;
+}
+
+/* Style pour le trait blanc */
+.trait {
+    color: rgba(255, 255, 255, 0.5); /* Couleur blanche semi-transparente */
+    font-size: 16px; /* Taille du trait */
+    margin-right: 10px; /* Espace après le trait */
+    vertical-align: middle; /* Alignement vertical */
+    display: inline-block; /* Affichage en ligne */
+}
+
+/* Style pour les liens du sous-menu */
+.submenu div {
+    padding: 0 15px 0 0; /* Espace à droite */
+}
+.submenu div a {
+    padding: 8px 15px; /* Espacement interne */
+    display: inline-block; /* Affichage en ligne */
+    color: white; /* Texte blanc */
+    text-decoration: none; /* Pas de soulignement */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Ligne de séparation */
+    transition: all 0.2s; /* Animation fluide */
+    vertical-align: middle; /* Alignement vertical */
+}
+.submenu div a:hover { /* Effet au survol du lien */
+    background-color: rgba(68, 0, 255, 0.3); /* Fond violet clair */
+    padding-left: 20px; /* Lien décalé vers la droite */
+}
+
+/* Titre principal */
+#bienvenue {
+    font-family: 'gear', sans-serif; /* Utilise la police personnalisée */
+    font-size: 80px; /* Taille très grande */
+    color: #ff0000; /* Rouge vif */
+    text-align: center; /* Centré */
+    margin: 30px 0; /* Espacement vertical */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Ombre du texte */
+    padding: 10px; /* Espacement interne */
+}
+
+/* Section de présentation */
+.presentation {
+    display: flex; /* Affichage en ligne */
+    flex-direction: row; /* Alignement horizontal */
+    justify-content: space-between; /* Espacement entre les éléments */
+    align-items: center; /* Alignement vertical centré */
+    border: 1px solid rgba(255, 255, 255, 0.3); /* Bordure blanche transparente */
+    border-radius: 10px; /* Coins arrondis */
+    margin: 50px 5%; /* Marges extérieures */
+    background-color: rgba(30, 30, 30, 0.9); /* Fond gris foncé semi-transparent */
+    padding: 40px 30px; /* Espacement interne */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Ombre */
+    text-align: center; /* Texte centré */
+    transition: all 0.4s ease; /* Transition fluide */
+}
+.presentation:hover { /* Effet au survol */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5); /* Ombre plus marquée */
+    transform: translateY(-5px); /* Légère élévation */
+    background-color: rgba(40, 40, 40, 0.95); /* Fond un peu plus sombre */
+}
+.presentation img { /* Image de la section présentation */
+    max-width: 250px; /* Taille max *//* Police et fond */
+@font-face { /* Déclaration d'une nouvelle police personnalisée */
+    font-family: 'gear'; /* Nom de la police à utiliser dans le CSS */
+    src: url('gear6/Gear6.woff') format('woff'); /* Source du fichier de police */
+}
+body { /* Style global du corps de la page */
+    background-image: url('gant.jpg'); /* Image d’arrière-plan */
+    background-repeat: no-repeat; /* Empêche la répétition de l’image */
+    background-size: cover; /* L’image couvre toute la page */
+    background-attachment: fixed; /* L’image reste fixe lors du défilement */
+    background-position: center; /* Centre l’image */
+    font-family: 'Arial', sans-serif; /* Police principale du texte */
+    margin: 0; /* Supprime les marges par défaut */
+    padding: 0; /* Supprime les espacements internes par défaut */
+    color: white; /* Texte en blanc */
+    width: 100%; /* Largeur totale de la page */
+    max-width: 100%; /* Empêche le dépassement horizontal */
+    overflow-x: hidden; /* Cache le débordement horizontal */
+    line-height: 1.6; /* Espacement vertical du texte */
+}
+
+/* En-tête et menu */
+nav { /* Style de la barre de navigation */
+    background-color: rgba(0, 0, 0, 0.8); /* Fond noir semi-transparent */
+    font-size: 24px; /* Taille du texte */
+    padding: 15px 0; /* Espace intérieur en haut et en bas */
+    display: flex; /* Affiche les éléments du menu en ligne */
+    justify-content: center; /* Centre les éléments horizontalement */
+    width: 100%; /* Largeur totale */
+    margin-bottom: 50px; /* Espace sous le menu */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3); /* Ombre sous le menu */
+    position: sticky; /* Le menu reste en haut au défilement */
+    top: 0; /* Positionné en haut de la page */
+    z-index: 100; /* Priorité d’affichage élevée */
+}
+nav > div { /* Chaque élément du menu */
+    padding: 10px 30px; /* Espacement interne */
+    margin: 0 20px; /* Espacement entre les éléments */
+    transition: all 0.3s; /* Animation fluide au survol */
+}
+nav > div:hover { /* Effet au survol du menu */
+    background-color: rgba(68, 0, 255, 0.3); /* Fond violet transparent */
+    border-radius: 5px; /* Coins arrondis */
+}
+
+/* Sous-menu */
+.submenu { /* Conteneur du sous-menu */
+    display: none; /* Caché par défaut */
+    background-color: rgba(0, 0, 0, 0.9); /* Fond noir opaque */
+    padding: 5px 0; /* Espacement vertical interne */
+    margin-top: 5px; /* Espace au-dessus */
+    border-radius: 0 0 5px 5px; /* Coins arrondis en bas */
+    min-width: 200px; /* Largeur minimale */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Ombre */
+}
+.parents:hover .submenu { /* Affiche le sous-menu au survol du parent */
+    display: block;
+}
+
+/* Style pour le trait blanc */
+.trait {
+    color: rgba(255, 255, 255, 0.5); /* Couleur blanche semi-transparente */
+    font-size: 16px; /* Taille du trait */
+    margin-right: 10px; /* Espace après le trait */
+    vertical-align: middle; /* Alignement vertical */
+    display: inline-block; /* Affichage en ligne */
+}
+
+/* Style pour les liens du sous-menu */
+.submenu div {
+    padding: 0 15px 0 0; /* Espace à droite */
+}
+.submenu div a {
+    padding: 8px 15px; /* Espacement interne */
+    display: inline-block; /* Affichage en ligne */
+    color: white; /* Texte blanc */
+    text-decoration: none; /* Pas de soulignement */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Ligne de séparation */
+    transition: all 0.2s; /* Animation fluide */
+    vertical-align: middle; /* Alignement vertical */
+}
+.submenu div a:hover { /* Effet au survol du lien */
+    background-color: rgba(68, 0, 255, 0.3); /* Fond violet clair */
+    padding-left: 20px; /* Lien décalé vers la droite */
+}
+
+/* Titre principal */
+#bienvenue {
+    font-family: 'gear', sans-serif; /* Utilise la police personnalisée */
+    font-size: 80px; /* Taille très grande */
+    color: #ff0000; /* Rouge vif */
+    text-align: center; /* Centré */
+    margin: 30px 0; /* Espacement vertical */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Ombre du texte */
+    padding: 10px; /* Espacement interne */
+}
+
+/* Section de présentation */
+.presentation {
+    display: flex; /* Affichage en ligne */
+    flex-direction: row; /* Alignement horizontal */
+    justify-content: space-between; /* Espacement entre les éléments */
+    align-items: center; /* Alignement vertical centré */
+    border: 1px solid rgba(255, 255, 255, 0.3); /* Bordure blanche transparente */
+    border-radius: 10px; /* Coins arrondis */
+    margin: 50px 5%; /* Marges extérieures */
+    background-color: rgba(30, 30, 30, 0.9); /* Fond gris foncé semi-transparent */
+    padding: 40px 30px; /* Espacement interne */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Ombre */
+    text-align: center; /* Texte centré */
+    transition: all 0.4s ease; /* Transition fluide */
+}
+.presentation:hover { /* Effet au survol */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5); /* Ombre plus marquée */
+    transform: translateY(-5px); /* Légère élévation */
+    background-color: rgba(40, 40, 40, 0.95); /* Fond un peu plus sombre */
+}
+.presentation img { /* Image de la section présentation */
+    max-width: 250px; /* Taille max */
+    max-height: 200px;
+    border-radius: 5px; /* Coins arrondis */
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2); /* Ombre douce */
+    object-fit: cover; /* Ajuste l’image sans la déformer */
+    transition: all 0.3s ease; /* Transition fluide */
+}
+.presentation img:hover {
+    transform: scale(1.05); /* Agrandissement au survol */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+}
+.presentation div {
+    flex: 1; /* L’élément occupe tout l’espace disponible */
+    padding: 0 20px; /* Espace interne */
+    text-align: center; /* Texte centré */
+    transition: all 0.3s ease; /* Animation fluide */
+}
+.presentation h2 {
+    font-size: 36px; /* Taille du titre */
+    color: #ff0066; /* Rose vif */
+    margin-bottom: 20px; /* Espace sous le titre */
+    line-height: 1.3; /* Hauteur de ligne */
+    transition: all 0.3s ease;
+}
+.presentation:hover h2 {
+    color: #ff3388; /* Couleur plus claire au survol */
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8);
+}
+.presentation p {
+    font-size: 18px; /* Taille du texte */
+    color: white; /* Texte blanc */
+    line-height: 1.7; /* Espacement vertical */
+    margin: 0;
+    transition: all 0.3s ease;
+}
+.presentation:hover p {
+    color: #f0f0f0; /* Texte légèrement plus clair */
+    font-size: 18.5px; /* Légère augmentation de taille */
+}
+
+/* Responsive */
+@media (max-width: 768px) { /* Règles pour les petits écrans */
+    .presentation {
+        flex-direction: column; /* Les éléments passent en colonne */
+    }
+    .presentation img {
+        margin-bottom: 20px; /* Espace sous l’image */
+    }
+}
+
+/* Conteneur pour la vidéo */
+.video-container {
+    width: 100%; /* Largeur totale */
+    max-width: 500px; /* Largeur max de la vidéo */
+    margin: 20px auto 0; /* Centré horizontalement */
+    text-align: center; /* Contenu centré */
+}
+.video-container video {
+    width: 100%; /* Vidéo prend toute la largeur */
+    height: auto; /* Hauteur proportionnelle */
+    border-radius: 8px; /* Coins arrondis */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Ombre */
+    background: #000; /* Fond noir */
+}
+@media (max-width: 768px) {
+    .video-container {
+        max-width: 100%; /* S’adapte à l’écran */
+    }
+}
+
+/* Sections et articles */
+article {
+    margin: 0 5%; /* Marges latérales */
+    padding: 20px; /* Espacement interne */
+}
+div.histoire, div.orga1, div.orga2 {
+    background-color: rgba(30, 30, 30, 0.8); /* Fond sombre */
+    border: 1px solid rgba(255, 255, 255, 0.2); /* Bordure claire */
+    border-radius: 10px; /* Coins arrondis */
+    display: flex; /* Disposition en ligne */
+    justify-content: space-between; /* Éléments espacés */
+    align-items: center; /* Centrage vertical */
+    padding: 30px;
+    margin: 50px 0;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s, box-shadow 0.3s; /* Animation fluide */
+}
+div.histoire:hover, div.orga1:hover, div.orga2:hover {
+    transform: translateY(-5px); /* Légère élévation */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+div.histoire div, div.orga1 div, div.orga2 div {
+    flex: 1;
+    padding: 0 20px;
+}
+div img {
+    max-width: 400px;
+    max-height: 300px;
+    height: auto;
+    width: auto;
+    border-radius: 5px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s;
+    object-fit: contain; /* L’image garde son format */
+    margin: 0 20px;
+}
+div img:hover {
+    transform: scale(1.02);
+}
+div p {
+    margin: 10px 0;
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+/* Titre des sections */
+h2 {
+    font-size: 32px;
+    color: #cc0000; /* Rouge foncé */
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #cc0000; /* Ligne rouge sous le titre */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+/* Style des liens */
+p a {
+    color: #4400ff; /* Violet */
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+.lien-one {
+    color: #f700ff; /* Couleur spéciale ONE Championship */
+    border-bottom: 2px solid #f700ff;
+    padding-bottom: 2px;
+}
+.lien-wbc {
+    color: #00cc66; /* Couleur spéciale WBC */
+    border-bottom: 2px solid #00cc66;
+    padding-bottom: 2px;
+}
+p a:hover {
+    text-decoration: underline;
+    opacity: 0.9;
+}
+.lien-one:hover {
+    color: #f380da;
+    border-bottom-color: #f380da;
+}
+.lien-wbc:hover {
+    color: #66ffcc;
+    border-bottom-color: #66ffcc;
+}
+
+/* Pied de page */
+footer {
+    font-size: 20px;
+    background-color: rgba(50, 50, 50, 0.8);
+    text-align: center;
+    padding: 20px;
+    width: 100%;
+    margin-top: 50px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+footer a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    background-color: rgba(68, 0, 255, 0.5);
+    border-radius: 5px;
+    transition: all 0.3s;
+}
+footer a:hover {
+    background-color: rgba(68, 0, 255, 0.8);
+    transform: scale(1.05);
+}
+
+/* Effet de survol sur tous les liens */
+a {
+    color: #4400ff;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+a:hover {
+    color: #ff0066;
+    text-decoration: underline;
+}
+
+/* Responsive : ajustement sur mobile */
+@media (max-width: 768px) {
+    div.histoire, div.orga1, div.orga2 {
+        flex-direction: column;
+        padding: 20px;
+    }
+    div img {
+        margin: 20px 0;
+    }
+    #bienvenue {
+        font-size: 50px;
+    }
+}
+
+    max-height: 200px;
+    border-radius: 5px; /* Coins arrondis */
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2); /* Ombre douce */
+    object-fit: cover; /* Ajuste l’image sans la déformer */
+    transition: all 0.3s ease; /* Transition fluide */
+}
+.presentation img:hover {
+    transform: scale(1.05); /* Agrandissement au survol */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+}
+.presentation div {
+    flex: 1; /* L’élément occupe tout l’espace disponible */
+    padding: 0 20px; /* Espace interne */
+    text-align: center; /* Texte centré */
+    transition: all 0.3s ease; /* Animation fluide */
+}
+.presentation h2 {
+    font-size: 36px; /* Taille du titre */
+    color: #ff0066; /* Rose vif */
+    margin-bottom: 20px; /* Espace sous le titre */
+    line-height: 1.3; /* Hauteur de ligne */
+    transition: all 0.3s ease;
+}
+.presentation:hover h2 {
+    color: #ff3388; /* Couleur plus claire au survol */
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8);
+}
+.presentation p {
+    font-size: 18px; /* Taille du texte */
+    color: white; /* Texte blanc */
+    line-height: 1.7; /* Espacement vertical */
+    margin: 0;
+    transition: all 0.3s ease;
+}
+.presentation:hover p {
+    color: #f0f0f0; /* Texte légèrement plus clair */
+    font-size: 18.5px; /* Légère augmentation de taille */
+}
+
+/* Responsive */
+@media (max-width: 768px) { /* Règles pour les petits écrans */
+    .presentation {
+        flex-direction: column; /* Les éléments passent en colonne */
+    }
+    .presentation img {
+        margin-bottom: 20px; /* Espace sous l’image */
+    }
+}
+
+/* Conteneur pour la vidéo */
+.video-container {
+    width: 100%; /* Largeur totale */
+    max-width: 500px; /* Largeur max de la vidéo */
+    margin: 20px auto 0; /* Centré horizontalement */
+    text-align: center; /* Contenu centré */
+}
+.video-container video {
+    width: 100%; /* Vidéo prend toute la largeur */
+    height: auto; /* Hauteur proportionnelle */
+    border-radius: 8px; /* Coins arrondis */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Ombre */
+    background: #000; /* Fond noir */
+}
+@media (max-width: 768px) {
+    .video-container {
+        max-width: 100%; /* S’adapte à l’écran */
+    }
+}
+
+/* Sections et articles */
+article {
+    margin: 0 5%; /* Marges latérales */
+    padding: 20px; /* Espacement interne */
+}
+div.histoire, div.orga1, div.orga2 {
+    background-color: rgba(30, 30, 30, 0.8); /* Fond sombre */
+    border: 1px solid rgba(255, 255, 255, 0.2); /* Bordure claire */
+    border-radius: 10px; /* Coins arrondis */
+    display: flex; /* Disposition en ligne */
+    justify-content: space-between; /* Éléments espacés */
+    align-items: center; /* Centrage vertical */
+    padding: 30px;
+    margin: 50px 0;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s, box-shadow 0.3s; /* Animation fluide */
+}
+div.histoire:hover, div.orga1:hover, div.orga2:hover {
+    transform: translateY(-5px); /* Légère élévation */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+div.histoire div, div.orga1 div, div.orga2 div {
+    flex: 1;
+    padding: 0 20px;
+}
+div img {
+    max-width: 400px;
+    max-height: 300px;
+    height: auto;
+    width: auto;
+    border-radius: 5px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s;
+    object-fit: contain; /* L’image garde son format */
+    margin: 0 20px;
+}
+div img:hover {
+    transform: scale(1.02);
+}
+div p {
+    margin: 10px 0;
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+/* Titre des sections */
+h2 {
+    font-size: 32px;
+    color: #cc0000; /* Rouge foncé */
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #cc0000; /* Ligne rouge sous le titre */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+/* Style des liens */
+p a {
+    color: #4400ff; /* Violet */
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+.lien-one {
+    color: #f700ff; /* Couleur spéciale ONE Championship */
+    border-bottom: 2px solid #f700ff;
+    padding-bottom: 2px;
+}
+.lien-wbc {
+    color: #00cc66; /* Couleur spéciale WBC */
+    border-bottom: 2px solid #00cc66;
+    padding-bottom: 2px;
+}
+p a:hover {
+    text-decoration: underline;
+    opacity: 0.9;
+}
+.lien-one:hover {
+    color: #f380da;
+    border-bottom-color: #f380da;
+}
+.lien-wbc:hover {
+    color: #66ffcc;
+    border-bottom-color: #66ffcc;
+}
+
+/* Pied de page */
+footer {
+    font-size: 20px;
+    background-color: rgba(50, 50, 50, 0.8);
+    text-align: center;
+    padding: 20px;
+    width: 100%;
+    margin-top: 50px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+footer a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    background-color: rgba(68, 0, 255, 0.5);
+    border-radius: 5px;
+    transition: all 0.3s;
+}
+footer a:hover {
+    background-color: rgba(68, 0, 255, 0.8);
+    transform: scale(1.05);
+}
+
+/* Effet de survol sur tous les liens */
+a {
+    color: #4400ff;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+a:hover {
+    color: #ff0066;
+    text-decoration: underline;
+}
+
+/* Responsive : ajustement sur mobile */
+@media (max-width: 768px) {
+    div.histoire, div.orga1, div.orga2 {
+        flex-direction: column;
+        padding: 20px;
+    }
+    div img {
+        margin: 20px 0;
+    }
+    #bienvenue {
+        font-size: 50px;
+    }
+}

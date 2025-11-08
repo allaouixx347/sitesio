@@ -1,0 +1,110 @@
+@font-face {
+    font-family: 'monark';
+    src: url(monark/MONARK.otf);
+}
+
+/* Titre principal */
+.champions-titre {
+    font-family: 'gear', sans-serif;
+    color: #ff0000;
+    font-size: 40px;
+    text-align: center;
+    margin: 30px 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Sous-titres */
+.champions-sous-titre {
+    color: #584cff;
+    font-family: 'monark', sans-serif;
+    font-size: 32px;
+    text-align: center;
+    margin: 40px 0 20px;
+    border-bottom: 1px solid #ff6600;
+    padding-bottom: 10px;
+    
+}
+
+/* Conteneur du tableau */
+.tableau-container {
+    width: 90%;
+    margin: 0 auto 50px;
+    overflow-x: auto; /* Permet le défilement horizontal sur mobile */
+}
+
+/* Style du tableau */
+.champions-tableau {
+    width: 100%;
+    border-collapse: collapse;
+    background: rgba(30, 30, 30, 0.8);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* En-tête du tableau */
+.champions-tableau thead {
+    background: rgba(50, 50, 50, 0.9);
+}
+
+.champions-tableau th {
+    padding: 12px;
+    text-align: center;
+    color: #ff0000;
+    font-weight: bold;
+    border-bottom: 2px solid #ff0000;
+}
+
+/* Corps du tableau */
+.champions-tableau tbody tr {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.champions-tableau tbody tr:last-child {
+    border-bottom: none;
+}
+
+.champions-tableau td {
+    padding: 12px;
+    text-align: center;
+    color: white;
+}
+
+/* Style des images dans le tableau */
+.photo-champion {
+    max-width: 100px;
+    height: auto;
+    border-radius: 50%;
+    border: 2px solid #ff0000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+.photo-champion:hover{
+    max-width: 100%
+}
+
+.drapeau {
+    max-width: 30px;
+    height: auto;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 3px;
+}
+
+/* Survol des lignes */
+.champions-tableau tbody tr:hover {
+    background: rgba(60, 60, 60, 0.5);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .champions-tableau {
+        font-size: 14px;
+    }
+
+    .photo-champion {
+        max-width: 80px;
+    }
+
+    .champions-sous-titre {
+        font-size: 26px;
+    }
+}
